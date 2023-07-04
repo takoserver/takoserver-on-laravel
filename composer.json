@@ -1,0 +1,7 @@
+{
+    "require": {
+        "biscolab/laravel-recaptcha": "^6.0",
+        "google/recaptcha": "^1.3",
+        "arcanedev/no-captcha": "^1.0"
+    }
+}
