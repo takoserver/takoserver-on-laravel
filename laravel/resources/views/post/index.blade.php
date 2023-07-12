@@ -11,7 +11,7 @@
         </p>
         <div class="news-div">
             <p class="news-p">
-                {{$post->created_at}}
+                {{$post->created_at}} / {{$post->user->name??"名無し"}}
             </p>
         </div>
     </div>
