@@ -73,7 +73,7 @@ height: 100vh; /* 全画面表示 */
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center center;
-background-image: url(../images/main-bg.png);
+background-image: url(../images/main-bg.webp);
 }
 
 /* 黒の背景 */
@@ -476,4 +476,28 @@ button{
 }
 .register p a:hover{
     text-decoration: underline;
+}
+.news {
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: #161B22;
+    width: 100%;
+    border-radius: 1rem;
+}
+.news-h1 {
+    padding: 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+.news-hr {
+    width: 100%;
+}
+.news-p {
+    margin-top: 1rem;
+    padding:1rem;
+}
+.news-div {
+    padding: 1rem;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 600;
 }

@@ -4,7 +4,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400&display=swap');
     </style>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://19b757c43e7d-12435307787656903087.ngrok-free.app/css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link

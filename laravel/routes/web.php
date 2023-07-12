@@ -5,6 +5,14 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\AuthLogout;
 use Illuminate\Auth\Events\Logout;
 use App\Http\Controllers\PrivacyPolicy;
+use App\Http\Controllers\PostController;
+
+Route::get('post',[PostController::class,'index']);
+
+Route::post('post',[PostController::class,'store'])
+->name('post.store');
+
+Route::get('post/create',[PostController::class,'create']);
 
 Route::get('/home', [TestController::class, 'home'])
 ->name('home')->middleware('auth');
