@@ -1,37 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <link rel="stylesheet" href="./css/style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
-    />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
-    <title>あたらしめのタコサバ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-</head><body>
-<header id="header">
-  <div class="inner">
-    <img src="./images/logo.png" alt="a" class="logo">
-    <ul class="navi">
-        @if (Route::has('login'))
-            @auth
-                <li><a href="{{ url('/home') }}">サービス</a></li>
-                <li><a href="./logout">ログアウト</a></li>
-            @else
-                <li><a href="{{ route('login') }}">ログイン</a></li>
-
-                @if (Route::has('register'))
-                    <li><a href="{{ route('register') }}">登録</a></li>
-                @endif
-            @endauth
-    @endif
-      <li><a href="#">オープンチャット</a></li>
-    </ul>
-  </div>
-</header><div class="hero overlay">
+@php
+ $title = 'takoserver porject!';
+@endphp
+@include("common.header")
+<div class="hero overlay">
     <div class="text-box">
     <h1 class="title">takoserver project!</h1>
     <p class="description">たこが偏差値を消費して開発しているサーバーです</p>
@@ -46,6 +17,8 @@
     </div>
     <img src="./images/logo-mine.jpg" alt="tako">
     <p>
+        ※TAKOserver NEXUSとは無関係です<br>
+        ※takoserverにもマインクラフトサーバーはありましたが現在は停止中<br>
         前のホームページ兼実験場はいじりすぎて死にました<br>
         今回は前よりもシンプルなかんじでつくったから多分バグらないです(フラグ)<br>
         ↓はtakoserverの説明です<br>
@@ -84,10 +57,5 @@
    <div class="main">
         <h2 class="midashi1">takoserverの歴史</h2>
     </div>
---><footer>
-    <div class="footer-m">
-        <p><small>Copyright &copy; 2022-2023 Tomiyama Shota All Rights Reserved.</small></p>
-        <a href="http://localhost/privacy" class="footer-a">プライバシーポリシー</a>
-    </div>
-</footer>
-</html>
+-->
+@include("common.header")

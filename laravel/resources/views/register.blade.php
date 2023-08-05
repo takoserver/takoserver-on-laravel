@@ -1,3 +1,6 @@
+@php
+ $title = 'takoserver 登録';
+@endphp
 @include('common.header')
 <section>
 	<div class="form-box">

@@ -4,7 +4,8 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400&display=swap');
     </style>
-    <link rel="stylesheet" href="https://19b757c43e7d-12435307787656903087.ngrok-free.app/css/style.css">
+    <link rel="icon" href="/tako.ico">
+    <link rel="stylesheet" href="https://takoserver.com/css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link
@@ -12,10 +13,9 @@
     href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
     />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
-    <title>あたらしめのタコサバ</title>
+    <title>{{ $title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-  </head><body>
+    </head><body>
 <header id="header">
   <div class="inner">
     <a href="./">

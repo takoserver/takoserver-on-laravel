@@ -21,6 +21,7 @@ class PostController extends Controller
         $validated['user_id'] = auth()->id();
 
         $post = Post::create($validated);
+        $request->session()->flash('message', '保存しました');
         return back();
     }
 

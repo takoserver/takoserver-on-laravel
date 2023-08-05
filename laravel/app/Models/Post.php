@@ -11,7 +11,6 @@ class Post extends Model
     protected $fillable = [
         'title',
         'body',
-        // CHAPTER7で追加
         'user_id'
     ];
 
