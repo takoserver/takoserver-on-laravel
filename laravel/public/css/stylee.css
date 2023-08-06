@@ -1,143 +1,119 @@
 @charset "utf-8";
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: 'Poppins', 'Noto Sans JP',sans-serif;
-    background-color: #f0f8ff;
-  }
-  
-  header {
-    height: 45px;
-    width: 100%;
-    padding: 0px 15px;
-    background-color: #161B22;
-    position: fixed;
-    top: 0;
-    z-index: 10000000000000000999;
+body {
+    color: black;
+    padding-top: 90px; /* ヘッダーの後ろに要素が隠れないようにするため */
+}
+header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #0D1117;
+    color: black;
+    box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    display: flex; /* 中の要素を横並びにする */
+    align-items: center; /* 中の要素を上下中央に並べる */
+    width: 100%; /* 幅いっぱいを指定 */
   }
   
   .logo {
-    font-size: 18px;
+    font-size: 24px;
+    color: white;
   }
   
-  nav {
-    margin: 0 0 0 auto;
-  }
-  
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .logo img {
-   height: 40px;
-   margin-top: 5px;
-   margin-bottom: 5px;
-  }
-  .menu-ul a {
-    color: #ffffff;
-    text-decoration: none;
-    display: block;
-    line-height: 45px;
-    padding: 0 10px;
-    font-size: 15px;
-    font-family: 'Poppins', 'Noto Sans JP',sans-serif;
-  }
-  
-  .sm {
+  /* ここから下がハンバーガーメニューに関するCSS */
+    
+  /* チェックボックスを非表示にする */
+  .drawer_hidden {
     display: none;
   }
   
-  
-  /**********************************　
-  以下、ハンバーガーメニューの設定　
-  ************************************/
-  
-  @media (max-width: 900px) {
-    .pc {
-      display: none;
-    }
-  
-    #hamburger {
-      background-color: transparent;
-      position: relative;
-      cursor: pointer;
-      margin: 0 0 0 auto;
-      height: 60px;
-      width: 60px;
-    }
-    .logo img {
-      height: 40px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-     }
-    header {
-      height: 60px;
-      width: 100%;
-      padding: 0px 15px;
-      background-color: #161B22;
-      position: fixed;
-      top: 0;
-      z-index: 10000000000000000999;
-      display: flex;
-    }
-    .icon span {
-      position: absolute;
-      left: 15px;
-      width: 30px;
-      height: 4px;
-      background-color: white;
-      border-radius: 8px;
-      transition: ease 0.75s;
-    }
-  
-    .icon span:nth-of-type(1) {
-      top: 16px;
-    }
-    .icon span:nth-of-type(2) {
-      top: 28px;
-    }
-    .icon span:nth-of-type(3) {
-      bottom: 16px;
-    }
-  
-    .close span:nth-of-type(1) {
-      transform: rotate(45deg);
-      top: 28px;
-    }
-  
-    .close span:nth-of-type(2) {
-      opacity: 0;
-    }
-  
-    .close span:nth-of-type(3) {
-        transform: rotate(-45deg);
-        top: 28px;
-    }
-  
-    .sm {
-        top: 60px;
-        left: 0px;
-        position: absolute;
-        z-index: 10;
-        width: 100%;
-        background-color: #161B22;
-    }
-  
-    ul {
-      flex-direction: column;
-    }
-  
-    .sm a {
-      text-align: center; 
-      border-top: solid 0.5px rgba(255, 255, 255, 0.6);
-    }
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
   }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: white;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+    
+  /* メニューのデザイン*/
+  .nav_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 10000000000000000;
+    background: #0D1117;
+    transition: .5s;
+  }
+  
+  /* メニュー黒ポチを消す */
+  .nav_list {
+    list-style: none;
+    height:60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked ~ .nav_content {
+    left: 0;/* メニューを画面に入れる */
+  }
+header .inner {
+position: relative;
+display: flex;
+align-items: center;
+height: 100%;
+}
 /* layout */
 
 body {
@@ -186,7 +162,7 @@ width: 100%;
 -webkit-transform: translate(-50%, -50%);
 -moz-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
-z-index: 100;
+z-index: 50;
 }
 .title {
 font-family: Roboto;
@@ -338,12 +314,21 @@ color: #0bd;
 .hero {
 width: 100%;
 }
+header .navi {
+margin: auto;
+}
 .title {
 font-size:2.5rem;
 }
 .inner {
 flex-direction: column;
 align-items: center;
+}
+header {
+height: 70px;
+}
+header .navi li {
+margin: 3px 0 3px 20px;
 }
 aside {
 margin-top: 60px;

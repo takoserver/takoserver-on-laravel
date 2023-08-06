@@ -58,4 +58,4 @@
         <h2 class="midashi1">takoserverの歴史</h2>
     </div>
 -->
-@include("common.header")
+@include("common.footer")

@@ -6,6 +6,8 @@ use App\Http\Controllers\AuthLogout;
 use Illuminate\Auth\Events\Logout;
 use App\Http\Controllers\PrivacyPolicy;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\MemberController;
 
 Route::get('post',[PostController::class,'index']);
 
@@ -21,6 +23,12 @@ Route::get('/logout', [AuthLogout::class, 'logout'])
 ->name('logout');
 Route::get('/privacypolicy', [PrivacyPolicy::class, 'privacypolicy'])
 ->name('privacypolicy');
+
+Route::get('/about', [AboutController::class, 'about'])
+->name('privacypolicy');
+
+Route::get('/member', [MemberController::class, 'member'])
+->name('member');
 /*
 |--------------------------------------------------------------------------
 | Web Routes

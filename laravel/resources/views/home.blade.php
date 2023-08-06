@@ -1,3 +1,6 @@
+@php
+ $title = 'ダッシュボード';
+@endphp
 @include('common.header')
 <div class="nyanya wrapper">
     @auth
