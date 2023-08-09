@@ -18,4 +18,11 @@ https://takoserver.com<br>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <h1>協力者</h1>
-https://404kit.com
+https://404kit.com<br>
+          #         ###   #      <br>
+          #    #   #   #  #    #  #    # # ##### <br>
+          #    #  #     # #    #  #   #  #   #  <br>
+          #    #  #     # #    #  ####   #   # <br>
+          ####### #     # ####### #  #   #   # <br>
+               #   #   #       #  #   #  #   # <br>
+               #    ###        #  #    # #   #  <br>
