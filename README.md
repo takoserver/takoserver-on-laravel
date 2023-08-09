@@ -1,6 +1,6 @@
 # takoserver on laravel
 一応ルール
-コミットする時になにかえたか書いといてね
+コミットする時になにかえたか書いといてね<br>
 🐙🐙🐙🐙🐙🐙🐙🐙🐙🐙🐙🐙🐙🐙🐙<br>
 タコの偏差値を消費するサイト<br>
 https://takoserver.com<br>
