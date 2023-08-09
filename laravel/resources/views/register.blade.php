@@ -1,5 +1,5 @@
 @php
- $title = 'takoserver 登録';
+ $title = '登録';
 @endphp
 @include('common.header')
 <section>
